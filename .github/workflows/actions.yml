@@ -1,0 +1,17 @@
+name: my first git hub actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@V3
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      
